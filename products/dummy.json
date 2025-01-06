@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "category": "T-shirt",
+        "name": "Men's Fashion T-shirt",
+        "price": 139.00,
+        "sizes": ["S (36)", "M (38)", "L (40)", "XL (42)", "XXL (44)"],
+        "product_description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic first preshrunk jersey knit provides unmatched comfort with each wear. Featuring a taped neck and shoulder, and a seamless double-needle collar, and available in a range of colors, it offers it all in the ultimate head-turning package.",
+        "image": "https://i.postimg.cc/kg9YYbTn/f1.jpg",
+        "images": [
+            "https://i.postimg.cc/kg9YYbTn/f1.jpg",
+            "https://i.postimg.cc/2yhT2kvb/f2.jpg",
+            "https://i.postimg.cc/VL9DtNm2/f3.jpg",
+            "https://i.postimg.cc/vZ3hPS1z/f4.jpg",
+            "https://i.postimg.cc/q7FLrhx6/f5.jpg"
+        ]
+    }
+]

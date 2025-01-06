@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "brand": "Nike",
+    "name": "Tatum 2 'Vortex' PF",
+    "gender": "Men's Shoes",
+    "rating": 5,
+    "price": 11495.00,
+    "link": "https://www.nike.com/in/t/tatum-2-legacy-pf-basketball-shoes-WWbXXK/FJ6458-300",
+    "image": "products/featured2.png",
+    "category": "Basketball Shoes",
+    "product_description": "Bright colours and big energy come together in the Tatum 2 'Vortex'. The lightweight, flexible design was created with energy return in mind and this colourway is all about how Jayson helps energise his team. When you're wearing them on the court, your opponents won't be able to ignore all the moves you make—but that doesn't mean they can stop you from scoring.",
+    "images": [
+      "products/featured21.png",
+      "products/featured22.png",
+      "products/featured23.png",
+      "products/featured24.png"
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Nike",
+    "name": "Nike Air Max Solo",
+    "gender": "Men",
+    "rating": 5,
+    "price": 8695.00,
+    "link": "https://www.nike.com/in/t/air-max-solo-shoes-qVq5jJ/DX3666-104",
+    "image": "products/NEW ARRIVAL 2.WEBP",
+    "category": "Sneakers",
+    "product_description": "These sneakers are for the Air Max superfans. By combining elements from past Air Max models (like the AM90-inspired heel cup), we created a whole new look. The AM180 influences the textured Air unit, which delivers just the right amount of cushioning. Go ahead—Max out your look.",
+    "images": [
+      "products/NEW ARRIVAL 21.WEBP",
+      "products/NEW ARRIVAL 22.WEBP",
+      "products/NEW ARRIVAL 23.WEBP",
+      "products/NEW ARRIVAL 24.WEBP"
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Nike",
+    "name": "Nike Zoom Vomero 5",
+    "gender": "Women",
+    "rating": 4,
+    "price": 14995.00,
+    "link": "https://www.nike.com/in/t/zoom-vomero-5-shoes-nBgHTq/HJ3846-133",
+    "image": "products/NEW ARRIVAL 3.WEBP",
+    "category": "Sneakers",
+    "product_description": "Carve a new lane for yourself in the Zoom Vomero 5. The complex design takes early 2000s running to modern heights by pairing airy textiles with durable accents, creating a richly layered look that's easy to style.Snappy and responsive, Zoom Air cushioning helps provide a quick-off-the-ground sensation. It uses stretched tensile fibres knit inside a pressurised Nike Air unit, giving athletes everywhere a chance to find their fast.",
+    "images": [
+      "products/NEW ARRIVAL 31.WEBP",
+      "products/NEW ARRIVAL 32.WEBP",
+      "products/NEW ARRIVAL 33.WEBP",
+      "products/NEW ARRIVAL 34.WEBP"
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "Nike",
+    "name": "Nike Air Force 1 '07 Next Nature SE",
+    "gender": "Women",
+    "rating": 4,
+    "price": 10795.00,
+    "link": "https://www.nike.com/in/t/air-force-1-07-next-nature-se-shoes-tpPRVT/FN8540-001",
+    "image": "products/NEW ARRIVAL 4.WEBP",
+    "category": "Sneakers",
+    "product_description": "Comfortable, durable and timeless—the AF-1 is a fan favourite for a reason. The classic '80s construction is paired with bold details for style that tracks whether you're on the court or on the go. Take your style up another notch with chrome accents on the laces.Debuting in 1982 as a basketball must-have, the Air Force 1 came into its own in the '90s. The clean look of the classic white-on-white AF-1 was endorsed from the basketball courts to the street and beyond. Finding its rhythm in hip-hop culture, releasing limited collabs and colourways, Air Force 1 became an iconic sneaker around the globe. And with over 2,000 iterations of this staple, its impact on fashion, music and sneaker culture can't be denied.",
+    "images": [
+      "products/NEW ARRIVAL 41.WEBP",
+      "products/NEW ARRIVAL 42.WEBP",
+      "products/NEW ARRIVAL 43.WEBP",
+      "products/NEW ARRIVAL 44.WEBP"
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Nike",
+    "name": "Jordan Spizike Low",
+    "gender": "Older Kids' Shoes",
+    "rating": 5,
+    "price": 9295.00,
+    "sizes": ["7", "8", "9", "10", "11"],
+    "link": "https://www.nike.com/in/t/jordan-spizike-low-older-shoes-40FbDq/FQ3950-100",
+    "image": "products/featured1.png",
+    "category": "Sneakers",
+    "product_description": "The Spizike takes elements of five classic Jordans, combines them and gives you one iconic sneaker. It's an homage to Spike Lee formally introducing Hollywood and hoops in a culture moment. You get a great-looking pair of kicks with some history. What more can you ask for? Ya dig?",
+    "images": [
+      "products/featured11.png",
+      "products/featured12.png",
+      "products/featured13.png",
+      "products/featured14.png"
+    ]
+  }
+  
+  
+]
