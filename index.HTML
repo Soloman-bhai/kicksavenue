@@ -1,0 +1,403 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+?>
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KicksAvenue</title>
+        <link rel="icon" href="products/icon (1).ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+      
+
+        <link rel="stylesheet" href="styles.css">
+      <!-------------------------Font Awesome Icons --------------->  
+  <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+  <!----------x---------------Font Awesome Icons --------x------->
+
+  <!----------x---------------Google font --------x------->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
+       <!----------x---------------Google font --------x----------------->
+       
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+       
+ 
+    </head>
+
+    <body>
+      <script src="fetch.js"></script>
+      
+ <section id="header">
+          <div class="logo">
+          <a href="#" id = "logo"><img src="Artboard 1 (1).png"></a>
+          </div>
+            
+          <div>
+            <ul id="navbar">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+              <li><a  class="btnLogin-popup"><ion-icon class="icon-user" name="contact"></ion-icon>Login</a></li>
+
+              <!-- <li><a href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
+                <span id="hid_icon" class="quantity">0</span>
+              </li> -->
+              <li><a href="#" id="close"<i class="far fa-times"></i></a></li>
+            </ul>
+          </div>
+          <div id="mobile">
+            <a href="cart.html" id="hid_icon"><i class="fal fa-shopping-bag"></i>
+            <span id="hid_icon1" class="quantity">0</span>
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+          </div>
+    </section>
+
+
+
+<!-- THE BELOW COMMENTED OUT PHP PROGRAM IS FOR LOGIN FUNCTIONALITY -->
+
+
+
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box login">
+          <h2>Login</h2>
+          <form method="post" action="#">
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input type="password text" required name="user_name">
+                  <label>Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                  <input type="password" required maxlength="8" name="password">
+                  <label>Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label for=""><input type="checkbox">Remember me</label>
+                  <a href="#`">Forgot Password?</a>
+
+              </div>
+              <button type="submit" class="btn-login" value="Login">Login</button>
+              <div class="login-register">
+                  <p>Don't have an account?
+                      <a href="#" class="register-link">Register</a>
+                  </p>
+              </div>
+          </form>
+      </div>
+
+
+  <!-- <?php
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$user_name = $_POST['user_name'];
+		$password = $_POST['password'];
+
+
+
+			
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		{
+			$query = "select * from users where binary user_name = '$user_name' limit 1";
+			$result = mysqli_query($con, $query);
+			
+			if($result && mysqli_num_rows($result) > 0)
+			{
+				echo "Username Already Exists!";
+				
+			}
+			else
+			{
+				//save to database
+				$user_id = random_num(20);
+				$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+
+				mysqli_query($con, $query);
+
+				// Redirect back to the stored URL if available, otherwise to index.php
+				$redirect_url = isset($_SESSION['return_to']) ? $_SESSION['return_to'] : "index.php";
+				unset($_SESSION['return_to']); // Remove stored URL after redirecting
+				header("Location: $redirect_url");
+				die;
+			}
+				
+		}
+		else
+		{
+			echo "Please enter some valid information!";
+		}
+	}
+?>
+  -->
+
+ 
+
+      <div class="form-box register">
+          <h2>Registeration</h2>
+          <form action="#" method="post">
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="password text" required name="user_name">
+                  <label>Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input type="password email" required name="email">
+                  <label>Email</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                  <input type="password" required maxlength="8" name="password">
+                  <label>Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label for=""><input type="checkbox">I agree to the terms & conditions</label>
+
+              </div>
+              <button type="submit" class="btn-login" value="Signup">Register</button>
+              <div class="login-register">
+                  <p>Already have an account?
+                      <a href="#" class="login-link">Login</a>
+                  </p>
+              </div>
+          </form>
+      </div>
+  </div> 
+
+
+
+<section id="hero">
+  <h4>Walk in Style</h4>
+  <h2>Sneaker Showcase</h2>
+  <h1>Shoe Splendor</h1>
+  <p>Step Up Your Game</p>
+  <button>Explore Now</button>
+  
+  
+</section>
+
+<section id="feature" class="section-p1">
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/PrN2Y6Cv/f1.png" alt="">
+    <h6>Free Shipping</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/qvycxW4q/f2.png" alt="">
+    <h6>Online Order</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/1Rdphyz4/f3.png" alt="">
+    <h6>Save Money</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/GpYc2JFZ/f4.png" alt="">
+    <h6>Promotions</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/4yFCwmv6/f5.png" alt="">
+    <h6>Happy Sell</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/gJN1knTC/f6.png" alt="">
+    <h6>F24/7 Support</h6>
+  </div>
+  
+</section>
+
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p>Summer Collection New Modern Design</p>
+  <div id="featured-products" class="product-container">
+  <div class="pro-container">
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            // Call the function after the DOM content is loaded
+            card_make('products/featured-product.json','.pro-container');
+        })
+    </script>
+    
+  </div>
+  </div>
+</section>
+
+<section id="banner" class="section-m1">
+  <h4>Trendy Treads: </h4>
+  <h2>Exploring the <span>World of Footwear Fashion!</span> with KicksAvenue</h2>
+  <button id="exploreButton" class="btn normal">Explore more</button>
+  </section>
+
+  <script>
+    // Get the button element by its ID
+    const exploreButton = document.getElementById('exploreButton');
+
+    // Add click event listener to the button
+    exploreButton.addEventListener('click', () => {
+        // Redirect to product description page with unique identifier
+        const jsonFilePath = 'products/new-arrival-product.json'; // Replace 'YOUR_JSON_FILE_PATH' with the actual JSON file path
+        window.location.href = `shop.html?jsonFilePath=${jsonFilePath}`;
+    });
+  </script>
+
+<section id="product1" class="section-p1">
+  <h2>New Arrivals</h2>
+  <p>Summer Collection New Modern Design</p>
+  <div id="new-arrival" class="product-container">
+  <div class="pro-container1">
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            // Call the function after the DOM content is loaded
+            card_make('products/new-arrival-product.json','.pro-container1');
+        })
+    </script>
+    
+  </div>
+  </div>
+</section>
+
+<section id="sm-banner" class="section-p1"> 
+  <div class="banner-box" style="text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)">
+    <h4>crazy deals</h4>
+    <h2>Treat Your Feet</h2>
+    <span>Get discounts on every Select Styles!</span>
+    <button class="btn white">Learn More</button> 
+  
+  </div>
+  
+  <div class="banner-box banner-box2" style="text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)">
+    <h4>spring/summer</h4>
+    <h2>Fresh Kicks for the New Season</h2>
+    <span>Discover Our Latest Arrivals!</span>
+    <button class="btn white">Collection</button> 
+  
+  </div>
+  
+</section>
+
+<section id="banner3" class="section-p1">
+  <div class="banner-box">
+    
+    <h2>Embrace the Chill</h2>
+    <h3>Winter's Cozy Companion</h3>
+ 
+  </div>
+  
+  <div class="banner-box banner-img2">
+    
+    <h2 style="text-shadow: 0 0 5px rgba(0, 0, 0, 0.4)">Step Into Action</h2>
+    <h3 style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.4)">Dynamic Sport Shoes</h3>
+ 
+  </div>
+  
+  <div class="banner-box banner-img3">
+    
+    <h2>Vibrant Footwear</h2>
+    <h3>Colorful Sneaker Collection</h3>
+ 
+  </div>
+  
+</section>
+
+<section id="newsletter" class="section-p1">
+  <div class="newstext">
+    <h4>Sign Up for Newsletters</h4>
+    <p>Get Email updates about our latest shop and <span> special offers.</span> </p>
+  </div>
+    <div class="form">
+    <input type="text" placeholder="Your email address">
+       <button class="btn normal">Sign Up</button>
+    </div>
+   
+  </div>
+  
+</section>
+
+<footer id="footer" class="section-p1">
+  
+<div class="col">
+<a href="#"><img class="logo" src="Artboard 1 (1).png"></a>
+    <h4>Contact</h4>
+     <p><strong>Address:<strong>349, XYZ street, AMRITSAR</p>
+    <p><strong>Phone:</strong>+23456876199, +23458903120</p>
+    <p><strong>Hours:</strong>10.00 - 18.00, Mon - Sat</p>
+       <div class="follow">
+         <h4>Follow Us</h4>
+         <div class="icon">
+           <i class="fab fa-facebook-f"></i>
+           <i class="fab fa-instagram"></i>
+           <i class="fab fa-twitter"></i>
+           <i class="fab fa-youtube"></i>
+           <i class="fab fa-pinterest-p"></i>
+            </div>
+       </div>
+       </div>
+      
+    <div class="sec">   
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About Us</a>
+      <!-- <a href="#">Delivery Information</a> -->
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms and Condition</a>
+      <a href="#">Contact Us</a>
+   </div>
+    
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Account</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track my Order</a>
+      <a href="#">Help</a>
+        
+    </div>
+    
+    <!-- <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+ 
+      <div class="row">
+      <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="">
+      <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="">
+    </div>
+    <p>Secured Payment Gateways</p>
+    <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="">
+       </div>
+  </div> -->
+  
+ </footer>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    
+  </body>
+
+</html>

@@ -1,0 +1,208 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KicksAvenue</title>
+        <link rel="icon" href="products/icon (1).ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+      
+
+        <link rel="stylesheet" href="styles.css">
+      <!-------------------------Font Awesome Icons --------------->  
+  <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+  <!----------x---------------Font Awesome Icons --------x------->
+
+  <!----------x---------------Google font --------x------->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
+       <!----------x---------------Google font --------x----------------->
+       
+ 
+    </head>
+
+    <body>
+      <script src="fetch.js"></script>
+      
+ <section id="header">
+          <div class="logo">
+          <a href="#" id = "logo"><img src="Artboard 1 (1).png"></a>
+          </div>
+            
+          <div>
+            <ul id="navbar">
+              <li><a href="index.HTML">Home</a></li>
+              <li><a href="shop.html" class="active">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+        <!-- <li><a href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
+                <span id="hid_icon" class="quantity">0</span>
+              </li> -->
+              <li><a href="#" id="close"<i class="far fa-times"></i></a></li>
+            </ul>
+          </div>
+          <div id="mobile">
+            <a href="cart.html" id="hid_icon"><i class="fal fa-shopping-bag"></i>
+            <span id="hid_icon1" class="quantity">0</span>
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+          </div>
+    </section>
+
+<section id="page-header" style="text-shadow: 0 0 5px rgba(0, 0, 0, 0.4)">
+  <h2>Step into Style</h2>
+  <h3>Explore Our Exclusive Shoe Collection!</h3>
+  
+</section>
+
+
+<section id="product1" class="section-p1">
+  <h2>Explore Our Collection</h2>
+  <p>Discover the latest modern designs and styles!</p>  
+  <div id="featured-products" class="product-container">
+  <div class="pro-container">
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Call the function after the DOM content is loaded
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const jsonFilePath = urlParams.get('jsonFilePath');
+          if (jsonFilePath) {
+              card_make(jsonFilePath, '.pro-container');
+          } else {
+              // If no JSON file path is provided, display products from all JSON files
+              const jsonFilePaths = ['products/featured-product.json', 'products/new-arrival-product.json'];
+              jsonFilePaths.forEach(path => card_make(path, '.pro-container'));
+          }
+      });
+    </script>
+    
+  </div>
+  </div>
+</section>
+
+
+<section id="sm-banner" class="section-p1"> 
+    <div class="banner-box" style="text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)">
+      <h4>crazy deals</h4>
+      <h2>Treat Your Feet</h2>
+      <span>Get discounts on every Select Styles!</span>
+      <button class="btn white">Learn More</button> 
+    
+    </div>
+    
+    <div class="banner-box banner-box2" style="text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)">
+      <h4>spring/summer</h4>
+      <h2>Fresh Kicks for the New Season</h2>
+      <span>Discover Our Latest Arrivals!</span>
+      <button class="btn white">Collection</button> 
+    
+    </div>
+    
+  </section>
+  
+  <section id="banner3" class="section-p1">
+    <div class="banner-box">
+      
+      <h2>Embrace the Chill</h2>
+      <h3>Winter's Cozy Companion</h3>
+   
+    </div>
+    
+    <div class="banner-box banner-img2">
+      
+      <h2 style="text-shadow: 0 0 5px rgba(0, 0, 0, 0.4)">Step Into Action</h2>
+      <h3 style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.4)">Dynamic Sport Shoes</h3>
+   
+    </div>
+    
+    <div class="banner-box banner-img3">
+      
+      <h2>Vibrant Footwear</h2>
+      <h3>Colorful Sneaker Collection</h3>
+   
+    </div>
+    
+  </section>
+
+  <section id="newsletter" class="section-p1">
+    <div class="newstext">
+      <h4>Sign Up for Newsletters</h4>
+      <p>Get Email updates about our latest shop and <span> special offers.</span> </p>
+    </div>
+      <div class="form">
+      <input type="text" placeholder="Your email address">
+         <button class="btn normal">Sign Up</button>
+      </div>
+     
+    </div>
+    
+  </section>
+  
+  <footer id="footer" class="section-p1">
+    
+  <div class="col">
+  <a href="#"><img class="logo" src="Artboard 1 (1).png"></a>
+      <h4>Contact</h4>
+       <p><strong>Address:<strong>349, XYZ street, AMRITSAR</p>
+      <p><strong>Phone:</strong>+23456876199, +23458903120</p>
+      <p><strong>Hours:</strong>10.00 - 18.00, Mon - Sat</p>
+         <div class="follow">
+           <h4>Follow Us</h4>
+           <div class="icon">
+             <i class="fab fa-facebook-f"></i>
+             <i class="fab fa-instagram"></i>
+             <i class="fab fa-twitter"></i>
+             <i class="fab fa-youtube"></i>
+             <i class="fab fa-pinterest-p"></i>
+              </div>
+         </div>
+         </div>
+        
+      <div class="sec">   
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <!-- <a href="#">Delivery Information</a> -->
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Condition</a>
+        <a href="#">Contact Us</a>
+     </div>
+      
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Account</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track my Order</a>
+        <a href="#">Help</a>
+          
+      </div>
+      
+      <!-- <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+   
+        <div class="row">
+        <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="">
+        <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="">
+         </div>
+    </div> -->
+    
+   </footer>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      
+    </body>
+  
+  </html>
